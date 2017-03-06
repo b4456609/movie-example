@@ -95,6 +95,11 @@ Feature: Ticket
         When The Ben pick the ticket
         Then Successful pick up the ticket
 ```
+## 架構圖
+Movie Example的系統架構圖，Eureka是擔任服務發現的角色，Zuul是擔任API Gateway的角色，系統主要有4個服務，分別是User、Movie、Order、Theather，每一個服務都有獨立的資料庫。
+![system arch](out/diagram/systemArch/systemArch@1-31.png)
+
+
 ## Sequence Diagram
 ![Registration](out/diagram/registration/Registration.png)
 
@@ -110,7 +115,7 @@ Feature: Ticket
 
 總共有4個微服務，分別為User、Movie、Theater、Order。
 
-### User
+### User Service
 - POST /user/registration 使用者註冊
 - GET /user/{id} 抓取使用者資訊
 
@@ -123,7 +128,7 @@ public class User{
 }
 ```
 
-### Movie
+### Movie Service
 - GET /movies 取得電影資訊
 - GET /movie/{id} 取得該電影資訊
 - GET /movie?q={name} 取得該電影資訊
@@ -143,7 +148,7 @@ public class Movie{
 }
 ```
 
-### Theater
+### Theater Service
 - GET /theater/timetable 電影時刻表
 - GET /theater/{theatherId} 電影廳資訊
 - GET /theater/show/{showId} 電影廳該場次資訊
@@ -167,7 +172,7 @@ public class Show{
 }
 ```
 
-### Order
+### Order Service
 - POST /book 訂票
 - GET /tickets/?userId={userId} 查看訂票
 - POST /tickets/{orderId} 取票

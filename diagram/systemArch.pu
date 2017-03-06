@@ -1,0 +1,31 @@
+@startuml
+actor user
+rectangle Zuul
+rectangle Eureka
+rectangle "User Service" as U
+rectangle "Order Service" as O
+rectangle "Theater Service" as T
+rectangle "Movie Service" as M
+
+database MovieDB
+database OrderDB
+database TheaterDB
+database UserDB
+
+Zuul ..> U
+Zuul ..> O
+Zuul ..> T
+Zuul ..> M
+Eureka <-- U
+Eureka <-- O
+Eureka <-- T
+Eureka <-- M
+Eureka <-- Zuul
+user --> Zuul
+
+M --> MovieDB
+U --> UserDB
+T --> TheaterDB
+O --> OrderDB
+
+@enduml
