@@ -2,7 +2,7 @@
 一個完整Microservices範例
 
 ## Use Case
-![useCase](out/diagram/useCase/useCase@1-8.png)
+![useCase](out/diagram/useCase/useCase@1-9.png)
 ## Scenario
 ```gherkin
 Feature: User Registraion

@@ -3,6 +3,7 @@ left to right direction
 :User: -- (Registration)
 :User: -- (View Movie Detail)
 :User: -- (View Timetable)
-:User: -- (Book Movie tickets)
-:User: -- (Get Movie tickets)
+:User: -- (Book Movie Tickets)
+:User: -- (Check Ticket Orders)
+:User: -- (Get Movie Tickets)
 @enduml
