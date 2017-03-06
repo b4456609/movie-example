@@ -104,7 +104,7 @@ Feature: Ticket
 
 ![bookMovieTickets](out/diagram/bookMovieTickets/Book%20Movie%20Tickets.png)
 
-![getMovieTickets](out/diagram/getMovieTickets/Get%20Movie%20Tickets.png)
+![getMovieTickets](out/diagram/pickUpMovieTickets/Pick%20Up%20Movie%20Tickets.png)
 
 ## Services
 

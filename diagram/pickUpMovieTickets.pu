@@ -1,12 +1,12 @@
 @startuml
 hide footbox
-title Get Movie Tickets
+title Pick Up Movie Tickets
 
 actor User
 participant "Order Service" as OS
 participant "User Service" as US
 
-User -> OS: Get Tickets Request
+User -> OS: Pick Up Tickets Request
 activate OS
 
 OS -> US: Check User
@@ -14,7 +14,7 @@ activate US
 US --> OS: Response\nA Valid User
 deactivate US
 
-OS --> User: Get Tickets Response
+OS --> User: Pick Up Tickets Response
 deactivate OS
 
 @enduml
