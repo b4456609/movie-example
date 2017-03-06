@@ -146,7 +146,7 @@ public class Movie{
 ### Theater
 - GET /theater/timetable 電影時刻表
 - GET /theater/{theatherId} 電影廳資訊
-- GET /theater/{theatherId}/{showId} 電影廳該場次資訊
+- GET /theater/show/{showId} 電影廳該場次資訊
 
 #### Theater Table
 ```java
