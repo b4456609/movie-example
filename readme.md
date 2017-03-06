@@ -2,18 +2,18 @@
 一個完整Microservices範例
 
 ## Use Case
-![useCase](out/useCase/useCase@1-8.png)
+![useCase](out/diagram/useCase/useCase@1-8.png)
 
 ## Sequence Diagram
-![Registration](out/registration/Registration.png)
+![Registration](out/diagram/registration/Registration.png)
 
-![viewMovieDetail](out/viewMovieDetail/View%20Movie%20Detail.png)
+![viewMovieDetail](out/diagram/viewMovieDetail/View%20Movie%20Detail.png)
 
-![viewTimetable](out/viewTimetable/View%20Movie%20Timetable.png)
+![viewTimetable](out/diagram/viewTimetable/View%20Movie%20Timetable.png)
 
-![bookMovieTickets](out/bookMovieTickets/Book%20Movie%20Tickets.png)
+![bookMovieTickets](out/diagram/bookMovieTickets/Book%20Movie%20Tickets.png)
 
-![getMovieTickets](out/getMovieTickets/Get%20Movie%20Tickets.png)
+![getMovieTickets](out/diagram/getMovieTickets/Get%20Movie%20Tickets.png)
 
 ## Services
 
