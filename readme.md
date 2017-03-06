@@ -152,6 +152,7 @@ public class Movie{
 - GET /theater/timetable 電影時刻表
 - GET /theater/{theatherId} 電影廳資訊
 - GET /theater/show/{showId} 電影廳該場次資訊
+- POST /theater/book/{showId} 預約座位
 
 #### Theater Table
 ```java
@@ -174,7 +175,7 @@ public class Show{
 
 ### Order Service
 - POST /book 訂票
-- GET /tickets/?userId={userId} 查看訂票
+- GET /tickets/user/{userId} 查看訂票
 - POST /tickets/{orderId} 取票
 
 #### Order Table

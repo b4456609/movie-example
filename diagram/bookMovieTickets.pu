@@ -15,9 +15,9 @@ activate US
 US --> OS: Response\nA Valid User
 deactivate US
 
-OS -> TS: Check Movie showing
+OS -> TS: Book Movie showing
 activate TS
-TS --> OS: Response Movie showing
+TS --> OS: Response
 deactivate TS
 
 OS --> User: Book Tickets Response
