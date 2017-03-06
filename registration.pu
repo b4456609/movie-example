@@ -1,0 +1,13 @@
+@startuml
+hide footbox
+title Registration
+
+actor User
+participant "User Service" as US
+
+User -> US: Registration Request
+activate US
+US --> User: Registration Response
+deactivate US
+
+@enduml

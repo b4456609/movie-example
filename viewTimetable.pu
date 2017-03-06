@@ -1,0 +1,18 @@
+@startuml
+hide footbox
+title View Movie Timetable
+
+actor User
+participant "Theater Service" as TS
+participant "Movie Service" as MS
+
+User -> TS: Movie Timetable Request
+activate TS
+TS -> MS: Movie Detail Request
+activate MS
+MS -> TS: Movie Detail Response
+deactivate MS
+TS --> User: Movie Movie Timetable
+deactivate TS
+
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+hide footbox
+title Book Movie Tickets
+
+actor User
+participant "Order Service" as OS
+participant "User Service" as US
+participant "Theater Service" as TS
+
+User -> OS: Book Tickets Request
+activate OS
+
+OS -> US: Check User
+activate US
+US --> OS: Response\nA Valid User
+deactivate US
+
+OS -> TS: Check Movie showing
+activate TS
+TS --> OS: Response Movie showing
+deactivate TS
+
+OS --> User: Book Tickets Response
+deactivate OS
+
+@enduml

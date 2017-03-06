@@ -1,0 +1,13 @@
+@startuml
+hide footbox
+title View Movie Detail
+
+actor User
+participant "Movie Service" as MS
+
+User -> MS: Movie Detail Request
+activate MS
+MS --> User: Movie Detail Response
+deactivate MS
+
+@enduml
