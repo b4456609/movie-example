@@ -17,6 +17,8 @@
 
 ## Services
 
+總共有4個微服務，分別為User、Movie、Theater、Order。
+
 ### User
 - POST /user/registration 使用者註冊
 - GET /user/{id} 抓取使用者資訊
