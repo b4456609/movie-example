@@ -119,7 +119,7 @@ Movie Example的系統架構圖，Eureka是擔任服務發現的角色，Zuul是
 - POST /user/registration 使用者註冊
 - GET /user/{id} 抓取使用者資訊
 
-#### User Table
+#### User Modal
 ```java
 public class User{
     UUID id;
@@ -128,7 +128,7 @@ public class User{
 }
 ```
 
-### Movie Service
+### Movie Modal
 - GET /movies 取得電影資訊
 - GET /movie/{id} 取得該電影資訊
 - GET /movie?q={name} 取得該電影資訊
@@ -148,7 +148,7 @@ public class Movie{
 }
 ```
 
-### Theater Service
+### Theater Modal
 - GET /theater/timetable 電影時刻表
 - GET /theater/{theatherId} 電影廳資訊
 - GET /theater/show/{showId} 電影廳該場次資訊
@@ -173,7 +173,7 @@ public class Show{
 }
 ```
 
-### Order Service
+### Order Modal
 - POST /book 訂票
 - GET /tickets/user/{userId} 查看訂票
 - POST /tickets/{orderId} 取票
@@ -188,3 +188,29 @@ public class Order{
     boolean isPickUp;
 }
 ```
+
+# All Repository
+- services
+    - movie-user
+    - movie-movie
+    - movie-theater
+    - movie-order
+- support
+    - movie-zuul
+    - movie-eureka
+- test
+    - movie-service-test
+    - movie-uat
+- deployment config
+    - movie-deployment
+
+# Tool
+- test
+    - pact broker
+- CI
+    - jenkins
+- deployment
+    - docker-compose
+- analysis system
+    - MCA
+    - MGP
