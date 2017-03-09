@@ -1,0 +1,12 @@
+[submodule "movie-user"]
+	path = movie-user
+	url = git@github.com:b4456609/movie-user.git
+[submodule "movie-order"]
+	path = movie-order
+	url = git@github.com:b4456609/movie-order.git
+[submodule "movie-movie"]
+	path = movie-movie
+	url = git@github.com:b4456609/movie-movie.git
+[submodule "movie-theater"]
+	path = movie-theater
+	url = git@github.com:b4456609/movie-theater.git
