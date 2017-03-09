@@ -10,3 +10,9 @@
 [submodule "movie-theater"]
 	path = movie-theater
 	url = git@github.com:b4456609/movie-theater.git
+[submodule "movie-eureka"]
+	path = movie-eureka
+	url = git@github.com:b4456609/movie-eureka.git
+[submodule "movie-zuul"]
+	path = movie-zuul
+	url = git@github.com:b4456609/movie-zuul.git
