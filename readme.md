@@ -121,8 +121,8 @@ Movie Example的系統架構圖，Eureka是擔任服務發現的角色，Zuul是
 
 #### User Modal
 ```java
-public class User{
-    UUID id;
+public class User {
+    String id;
     String name;
     String phone;
 }
@@ -133,14 +133,14 @@ public class User{
 - GET /movie/{id} 取得該電影資訊
 - GET /movie?q={name} 取得該電影資訊
 
-#### Movie Table
+#### Movie Model
 ```java
-public class Movie{
-    UUID id;
+public class Movie {
+    String id;
     String title;
-    int year;
+    String year;
     String rated;
-    int runTime;
+    String runTime;
     String genre;
     String director;
     String actors;
@@ -154,19 +154,19 @@ public class Movie{
 - GET /theater/show/{showId} 電影廳該場次資訊
 - POST /theater/book/{showId} 預約座位
 
-#### Theater Table
+#### Theater Model
 ```java
-public class Theater{
-    int id;
+public class Theater {
+    String id;
     int capacity;
 }
 ```
-#### Show Table
+#### Show Model
 ```java
-public class Show{
-    UUID id;
-    int theaterId;
-    UUID movieId;
+public class Show {
+    String id;
+    String theaterId;
+    String movieId;
     long start;
     long end;
     int emptySeat;
@@ -178,14 +178,15 @@ public class Show{
 - GET /tickets/user/{userId} 查看訂票
 - POST /tickets/{orderId} 取票
 
-#### Order Table
+#### Order Model
 ```java
-public class Order{
-    UUID id;
-    UUID userId;
-    UUID showId;
+public class Order {
+    String id;
+    String userId;
+    String showId;
     long timestamp;
     boolean isPickUp;
+    int ticket;
 }
 ```
 
