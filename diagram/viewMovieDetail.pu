@@ -5,9 +5,9 @@ title View Movie Detail
 actor User
 participant "Movie Service" as MS
 
-User -> MS: Movie Detail Request
+User -> MS: Movie Details Request
 activate MS
-MS --> User: Movie Detail Response
+MS --> User: Movie Details Response
 deactivate MS
 
 @enduml
