@@ -1,0 +1,18 @@
+@startuml
+
+node ci {
+    artifact Jenkins
+    artifact PactBroker
+    artifact DockerRegistry
+    artifact MGP
+}
+
+node test {
+    artifact "movie-microservice" as A
+}
+
+node production {
+    artifact "movie-microservice" as B
+}
+
+@enduml
