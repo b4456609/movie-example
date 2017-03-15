@@ -1,0 +1,92 @@
+version: '2'
+services:
+  eureka:
+    build: ./movie-eureka
+    ports:
+      - "8761:8761"
+    networks:
+      - inside
+  zuul:
+    build: ./movie-zuul
+    ports:
+      - "8080:8080"
+    networks:
+      - inside
+  movie:
+    build: ./movie-movie
+    ports:
+      - 8080
+    networks:
+      - inside
+    links:
+      - eureka
+      - moviedb
+    depends_on:
+      - moviedb
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+  moviedb:
+    image: mongo:3.4.2
+    ports:
+      - 27017
+    networks:
+      - inside
+  order:
+    build: ./movie-order
+    ports:
+      - 8080
+    networks:
+      - inside
+    links:
+      - eureka
+      - orderdb
+    depends_on:
+      - orderdb
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+  orderdb:
+    image: mongo:3.4.2
+    ports:
+      - 27017
+    networks:
+      - inside
+  theater:
+    build: ./movie-theater
+    ports:
+      - 8080
+    networks:
+      - inside
+    links:
+      - eureka
+      - theaterdb
+    depends_on:
+      - theaterdb
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+  theaterdb:
+    image: mongo:3.4.2
+    ports:
+      - 27017
+    networks:
+      - inside
+  user:
+    build: ./movie-user
+    ports:
+      - 8080
+    networks:
+      - inside
+    links:
+      - eureka
+      - userdb
+    depends_on:
+      - userdb
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+  userdb:
+    image: mongo:3.4.2
+    ports:
+      - 27017
+    networks:
+      - inside
+networks:
+  inside:
