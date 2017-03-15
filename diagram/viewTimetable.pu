@@ -8,9 +8,9 @@ participant "Movie Service" as MS
 
 User -> TS: Movie Timetable Request
 activate TS
-TS -> MS: Movie Detail Request
+TS -> MS: The Movie Detail Request
 activate MS
-MS -> TS: Movie Detail Response
+MS -> TS: The Movie Detail Response
 deactivate MS
 TS --> User: Movie Movie Timetable
 deactivate TS

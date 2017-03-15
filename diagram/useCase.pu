@@ -1,7 +1,7 @@
 @startuml
 left to right direction
 :User: -- (Registration)
-:User: -- (View Movie Detail)
+:User: -- (View Movie Details)
 :User: -- (View Timetable)
 :User: -- (Book Movie Tickets)
 :User: -- (Check Ticket Orders)

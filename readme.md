@@ -129,9 +129,10 @@ public class User {
 ```
 
 ### Movie Modal
-- GET /movies 取得電影資訊
+- GET /movie/timetable 取得電影資訊
 - GET /movie/{id} 取得該電影資訊
-- GET /movie?q={name} 取得該電影資訊
+- GET /movie/?q={name} 取得該電影資訊
+- POST /movie/ 新增電影
 
 #### Movie Model
 ```java
