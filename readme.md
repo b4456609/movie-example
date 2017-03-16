@@ -224,3 +224,20 @@ public class Order {
 - [vagrant-docker-compose](https://github.com/leighmcculloch/vagrant-docker-compose)
 install by `vagrant plugin install vagrant-docker-compose`
 - VirtualBox
+
+## Pipline
+The pipline need following env.
+```
+export MGP=localhost:10000
+export PACT_URL=http://localhost:8880/      
+export DB_HOST=localhost
+```
+### Unit Test
+In each core servie project, there is a `unitTest.sh`
+
+Run with `sh ./unitTest.sh`
+
+When the test finish, the mca file will upload to mgp. The pact file will upload to pact broker.
+
+### Build
+Build jar file and build docker image.
