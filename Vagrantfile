@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
     end
 
     ci.vm.provision :docker
-    ci.vm.provision :docker_compose, yml: "/Vagrant/tool/docker-compose.yml", run: "always"
+    ci.vm.provision :docker_compose, yml: "/vagrant/tool/docker-compose.yml", run: "always"
   end
   config.vm.define "test" do |test|
     test.vm.box = "debian/jessie64"
