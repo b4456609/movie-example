@@ -241,3 +241,19 @@ When the test finish, the mca file will upload to mgp. The pact file will upload
 
 ### Build
 Build jar file and build docker image.
+
+## Pact Broker
+1. To run the Pact Broker, run `docker-compose up -d` in tool folder.
+2. Run `sh ./runAllTest.sh` in root folder to run all unit test in project and upload to pact broker.
+
+The list of consumer and provider and their relationship
+
+![pact-home](img/pact-home.png)
+
+Visual the relationship between services
+
+![pact-network](img/pact-network.png)
+
+The contract between service
+
+![pact-dsl](img/pact-dsl.png)
