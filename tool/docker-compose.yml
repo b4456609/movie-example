@@ -1,0 +1,27 @@
+version: '2'
+services:
+  postgresql:
+    build: ./pactBrokerDB
+    ports:
+      - "5432:5432"
+    environment: 
+      - "POSTGRES_PASSWORD=ThePostgresPassword"
+      - "POSTGRES_USER=admin"
+  pactbroker:
+    image: dius/pact_broker
+    links: 
+      - "postgresql:postgres"
+    ports:
+      - "8880:80"
+    environment: 
+      - PACT_BROKER_DATABASE_NAME=pactbroker
+      - PACT_BROKER_DATABASE_HOST=postgres
+      - PACT_BROKER_DATABASE_PASSWORD=TheUserPassword
+      - PACT_BROKER_DATABASE_USERNAME=pactbrokeruser
+  jenkins:
+    image: jenkins:2.32.3
+    ports: 
+      - "8881:8080"
+    volumes: 
+      - /usr/bin/docker:/bin/docker
+      - /var/run/docker.sock:/var/run/docker.sock
