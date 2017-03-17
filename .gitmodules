@@ -19,3 +19,6 @@
 [submodule "movie-service-test"]
 	path = movie-service-test
 	url = git@github.com:b4456609/movie-service-test.git
+[submodule "movie-uat"]
+	path = movie-uat
+	url = git@github.com:b4456609/movie-uat.git
