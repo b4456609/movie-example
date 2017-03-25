@@ -10,8 +10,12 @@ services:
     build: ./movie-zuul
     ports:
       - "8080:8080"
+    links:
+      - eureka
     networks:
       - inside
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
   movie:
     build: ./movie-movie
     ports:
