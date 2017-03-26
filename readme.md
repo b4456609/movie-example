@@ -1,3 +1,5 @@
+[![](https://tokei.rs/b1/github/b4456609/movie-example)](https://github.com/b4456609/movie-example).
+
 # Movie Example
 一個完整Microservices範例
 
