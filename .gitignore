@@ -5,3 +5,8 @@
 .vagrant/
 
 # End of https://www.gitignore.io/api/vagrant
+
+
+ansible/hosts
+
+.directory

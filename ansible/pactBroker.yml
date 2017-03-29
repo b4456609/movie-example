@@ -1,0 +1,17 @@
+---
+- hosts: server
+  vars:
+    work_dir: /home/ubuntu/movie-example/tool
+  tasks:
+  - name: build postgresql
+    shell: docker-compose build
+    args:
+      chdir: "{{ work_dir }}"
+  - name: remove old container
+    shell: docker-compose down
+    args:
+      chdir: "{{ work_dir }}"
+  - name: run container
+    shell: docker-compose up -d
+    args:
+      chdir: "{{ work_dir }}"

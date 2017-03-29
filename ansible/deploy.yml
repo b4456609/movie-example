@@ -1,0 +1,39 @@
+---
+- hosts: server
+  vars:
+    work_dir: /home/ubuntu/movie-example
+  tasks:
+  - name: update git project
+    git:
+      repo: https://github.com/b4456609/movie-example.git
+      dest: "{{ work_dir }}"
+      force: yes
+      accept_hostkey: yes
+      clone: yes
+      update: yes
+      recursive: yes
+      track_submodules: yes
+  - name: build all spring boot
+    tags: back
+    shell: sh buildAll_async.sh
+    args:
+      chdir: "{{ work_dir }}"
+  - name: build container
+    tags: back
+    shell: docker-compose build
+    args:
+      chdir: "{{ work_dir }}"
+  - name: remove old container
+    tags:
+      - back
+      - re
+    shell: docker-compose down
+    args:
+      chdir: "{{ work_dir }}"
+  - name: run container
+    tags:
+      - back
+      - re
+    shell: docker-compose up -d
+    args:
+      chdir: "{{ work_dir }}"
