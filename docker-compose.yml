@@ -6,6 +6,8 @@ services:
       - "8761:8761"
     networks:
       - inside
+    environment:
+      - JAVA_OPTS=-Xmx128m
   zuul:
     build: ./movie-zuul
     ports:
@@ -16,6 +18,7 @@ services:
       - inside
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+      - JAVA_OPTS=-Xmx128m
   movie:
     build: ./movie-movie
     ports:
@@ -29,6 +32,7 @@ services:
       - moviedb
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+      - JAVA_OPTS=-Xmx52m
   moviedb:
     image: mongo:3.4.2
     ports:
@@ -48,6 +52,7 @@ services:
       - orderdb
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+      - JAVA_OPTS=-Xmx52m
   orderdb:
     image: mongo:3.4.2
     ports:
@@ -67,6 +72,7 @@ services:
       - theaterdb
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+      - JAVA_OPTS=-Xmx52m
   theaterdb:
     image: mongo:3.4.2
     ports:
@@ -86,6 +92,7 @@ services:
       - userdb
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+      - JAVA_OPTS=-Xmx52m
   userdb:
     image: mongo:3.4.2
     ports:
