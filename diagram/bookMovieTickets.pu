@@ -12,7 +12,7 @@ activate OS
 
 OS -> US: Check User
 activate US
-US --> OS: Response\nA Valid User
+US --> OS: Response\na Valid User
 deactivate US
 
 OS -> TS: Book Movie showing
